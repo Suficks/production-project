@@ -1,11 +1,13 @@
 .Button {
+  font: var(--font-m);
+
   outline: none;
-  font: var(--font-m)
 }
 
 .clear {
-  padding: 0;
   margin: 0;
-  background: none;
+  padding: 0;
   border: none;
+
+  background: none;
 }

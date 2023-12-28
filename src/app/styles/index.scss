@@ -1,15 +1,15 @@
-@import 'reset.scss';
-@import './variables/global.scss';
-@import './themes/dark.scss';
-@import './themes/light.scss';
+@import "reset";
+@import "./variables/global";
+@import "./themes/dark";
+@import "./themes/light";
 
 .app {
+  min-height: 100vh;
+
+  color: var(--primary-color);
   font: var(--font-m);
 
   background: var(--background-color);
-  color: var(--primary-color);
-
-  min-height: 100vh;
 }
 
 a {
@@ -25,6 +25,6 @@ button {
 }
 
 .page-wrapper {
-  padding: 20px;
   flex-grow: 1;
+  padding: 20px;
 }

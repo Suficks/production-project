@@ -1,17 +1,17 @@
 .Navbar {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
   height: var(--navbar-height);
   padding: 20px;
-  box-sizing: border-box;
 
   background: var(--inverted-background-color);
 }
 
 .links {
   display: flex;
+  gap: 20px;
   align-items: center;
   margin-left: auto;
-  gap: 20px;
 }
