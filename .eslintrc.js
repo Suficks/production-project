@@ -21,6 +21,12 @@ module.exports = {
         sourceType: 'script',
       },
     },
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -32,6 +38,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    '@typescript-eslint',
     'i18next',
   ],
   rules: {
@@ -49,8 +56,14 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
-    'max-len': ['error', { ignoreComments: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAllAttributes: true,
+      },
+    ],
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
     __IS_DEV__: true,
