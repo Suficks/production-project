@@ -8,4 +8,4 @@ export const RouteDecorator = (StoryComponent: Story) => (
     <StoryComponent />
   </BrowserRouter>
 
-)
+);
