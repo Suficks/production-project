@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 export const BugButton: FC = () => {
   const [error, setError] = useState(false);
@@ -14,7 +14,9 @@ export const BugButton: FC = () => {
 
   return (
     // eslint-disable-next-line i18next/no-literal-string
-    <Button onClick={onThrow}>
+    <Button
+      onClick={onThrow}
+    >
       throw error
     </Button>
   );

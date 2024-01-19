@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import React, { type FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -12,7 +12,7 @@ export enum AppLinkTheme {
 
 interface AppLinkProps {
   className?: string
-  children?: string
+  children?: React.ReactNode
   to?: string
   theme?: AppLinkTheme
 }
