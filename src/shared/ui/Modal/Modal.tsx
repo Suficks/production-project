@@ -10,7 +10,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
 
-
 interface ModalProps {
   className?: string;
   children?: ReactNode

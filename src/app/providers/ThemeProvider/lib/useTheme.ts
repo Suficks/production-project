@@ -16,6 +16,5 @@ export const useTheme = (): useThemeResult => {
     document.body.className = newTheme;
   };
 
-
   return { theme, toggleTheme };
 };
