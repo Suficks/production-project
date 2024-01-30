@@ -4,15 +4,8 @@
 @import "./themes/light";
 
 body {
-  font: var(--font-m);
-}
-
-.app {
-  min-height: 100vh;
-
   color: var(--primary-color);
-
-  background: var(--background-color);
+  font: var(--font-m);
 }
 
 a {
@@ -21,6 +14,12 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+
+  background: var(--background-color);
 }
 
 .content-page {
