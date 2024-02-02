@@ -3,12 +3,12 @@
     {
       "id": "1",
       "title": "a title",
-      "views": 100
+      "views": "100"
     },
     {
       "id": "2",
       "title": "another title",
-      "views": 200
+      "views": "200"
     }
   ],
   "comments": [
@@ -25,7 +25,7 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }
