@@ -20,7 +20,7 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 
 export interface LoginFormProps {
   className?: string;
-  onSuccess?: () => void
+  onSuccess: () => void
 }
 
 const initialReducers: ReducersList = {

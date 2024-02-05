@@ -13,7 +13,7 @@ export enum AppLinkTheme {
 interface AppLinkProps {
   className?: string
   children?: ReactNode
-  to?: string
+  to: string
   theme?: AppLinkTheme
 }
 
@@ -22,7 +22,7 @@ export const AppLink = memo((props: AppLinkProps) => {
     className,
     children,
     to,
-    theme,
+    theme = AppLinkTheme.PRIMARY,
     ...otherProps
   } = props;
 

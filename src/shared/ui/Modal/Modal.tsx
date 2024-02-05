@@ -1,5 +1,6 @@
 import React, {
   FC,
+  MutableRefObject,
   ReactNode,
   useCallback,
   useEffect,
@@ -30,7 +31,7 @@ export const Modal: FC<ModalProps> = (props) => {
   } = props;
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   useEffect(() => {
     if (isOpen) {
