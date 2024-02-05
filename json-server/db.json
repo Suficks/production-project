@@ -29,5 +29,15 @@
       "username": "admin",
       "password": "123"
     }
-  ]
+  ],
+  "profile": {
+    "first": "Софья",
+    "lastname": "Вдовиченко",
+    "age": 23,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint-Petersburg",
+    "username": "admin",
+    "avatar": "admin"
+  }
 }
