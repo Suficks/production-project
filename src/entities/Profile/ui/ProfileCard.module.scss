@@ -3,18 +3,32 @@
   border: 2px solid var(--inverted-background-color);
 }
 
-.header {
-  display: flex;
-}
-
-.editBtn {
-  margin-left: auto;
-}
-
-.data {
-  margin-top: 30px;
-}
-
 .input {
-  mask-type: 10px;
+  margin-top: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.avatarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.editing {
+  border: 2px solid var(--inverted-primary-color);
 }
