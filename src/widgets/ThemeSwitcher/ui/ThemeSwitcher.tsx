@@ -5,10 +5,17 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
+import OrangeIcon from 'shared/assets/icons/theme-orange.svg';
 
 interface ThemeSwitcherProps {
   className?: string
 }
+
+const iconType: Record<Theme, React.SVGProps<SVGSVGElement>> = {
+  [Theme.DARK]: <DarkIcon />,
+  [Theme.LIGHT]: <LightIcon />,
+  [Theme.ORANGE]: <OrangeIcon />,
+};
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
@@ -19,7 +26,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
       onClick={toggleTheme}
       className={classNames('', {}, [className])}
     >
-      {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+      {iconType[theme]}
     </Button>
   );
 });
