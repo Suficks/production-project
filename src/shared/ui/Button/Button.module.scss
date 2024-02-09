@@ -5,6 +5,14 @@
   font: var(--font-m);
 
   outline: none;
+
+  transition: 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    fill-opacity: 80%;
+    stroke-opacity: 80%;
+  }
 }
 
 .clear,
