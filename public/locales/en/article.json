@@ -1,4 +1,6 @@
 {
   "Произошла ошибка при загрузке статьи": "An error occurred while loading the article",
-  "Копировать": "Copy"
+  "Копировать": "Copy",
+  "Комментарии": "Comments",
+  "Комментарии отсутствуют": "No comments"
 }
