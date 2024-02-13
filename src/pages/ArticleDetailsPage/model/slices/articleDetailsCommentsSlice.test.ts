@@ -1,6 +1,6 @@
 import { ArticleDetailsCommentSchema } from '../types/ArticleDetailsCommentSchema';
-import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 
 const articleDetailsComments = [
   {
