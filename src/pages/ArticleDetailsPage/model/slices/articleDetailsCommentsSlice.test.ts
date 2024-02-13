@@ -1,8 +1,9 @@
+import { Comment } from 'entities/Comment';
 import { ArticleDetailsCommentSchema } from '../types/ArticleDetailsCommentSchema';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 
-const articleDetailsComments = [
+const articleDetailsComments: Comment[] = [
   {
     id: '1',
     text: 'some comment',
