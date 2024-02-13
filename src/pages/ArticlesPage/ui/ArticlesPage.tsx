@@ -1,6 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
+/* eslint-disable max-len */
+import { ArticleList } from 'entities/Article';
+import { ArticleView } from 'entities/Article/model/types/article';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -11,9 +14,11 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const { t } = useTranslation('article');
 
   return (
-    // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      Articles Page
+      <ArticleList
+        view={ArticleView.BIG}
+        articles={[]}
+      />
     </div>
   );
 };
