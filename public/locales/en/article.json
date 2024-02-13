@@ -2,5 +2,7 @@
   "Произошла ошибка при загрузке статьи": "An error occurred while loading the article",
   "Копировать": "Copy",
   "Комментарии": "Comments",
-  "Комментарии отсутствуют": "No comments"
+  "Комментарии отсутствуют": "No comments",
+  "Введите текст комментария": "Enter comment text",
+  "Отправить": "Send"
 }

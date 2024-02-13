@@ -102,6 +102,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dfdbdfbdf",
+      "id": "GHUiOxn"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "fgfgfg",
+      "id": "z09u8rN"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dfsdsbdfb",
+      "id": "_0qfGqU"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "jtjtyjy",
+      "id": "zSctPB6"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sfsdfsdfsdf",
+      "id": "o7DtkRW"
     }
   ],
   "users": [
@@ -117,17 +147,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/4120518/pub_60d736e753b1df70c252e972_60d737139051453050c622b7/scale_1200"
+      "avatar": "https://icdn.lenta.ru/images/2020/09/30/13/20200930130228617/square_320_49217eaf835b6789218c5b4fb666893d.jpg"
     }
   ],
-  "profile": {
-    "first": "Sofia",
-    "lastname": "ghjg",
-    "age": 102,
-    "currency": "USD",
-    "country": "Ukraine",
-    "city": "Saint-Petersburgsdsdf",
-    "username": "admin",
-    "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/4120518/pub_60d736e753b1df70c252e972_60d737139051453050c622b7/scale_1200"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Sofia",
+      "lastname": "Vdovichenko",
+      "age": 102,
+      "currency": "USD",
+      "country": "Ukraine",
+      "city": "Saint-Petersburgsdsdf",
+      "username": "admin",
+      "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/4120518/pub_60d736e753b1df70c252e972_60d737139051453050c622b7/scale_1200"
+    },
+    {
+      "id": "2",
+      "first": "Anton",
+      "lastname": "Dogadin",
+      "age": 25,
+      "currency": "USD",
+      "country": "Ukraine",
+      "city": "Saint-Petersburgsdsdf",
+      "username": "admin",
+      "avatar": "https://icdn.lenta.ru/images/2020/09/30/13/20200930130228617/square_320_49217eaf835b6789218c5b4fb666893d.jpg"
+    }
+  ]
 }

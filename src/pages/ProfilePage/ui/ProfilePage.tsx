@@ -22,6 +22,7 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 interface ProfilePageProps {
@@ -40,6 +41,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
+  const { id } = useParams<{ id: string }>();
 
   const validateErrorTranslates = {
     [ValidateProfileErrors.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
@@ -50,7 +52,9 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   };
 
   useInitialEffect(() => {
-    dispatch(fetchProfileData());
+    if (id) {
+      dispatch(fetchProfileData(id));
+    }
   });
 
   const onChangeFirstname = useCallback((value?: string) => {
@@ -86,7 +90,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   }, [dispatch]);
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <ProfilePageHeader />
       {validateErrors?.length && validateErrors.map((err) => (
         <Text

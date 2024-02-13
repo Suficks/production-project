@@ -29,7 +29,7 @@ button {
 
 .page-wrapper {
   flex-grow: 1;
-  width: 100%;
+  flex-shrink: 100;
   height: calc(100vh - var(--navbar-height));
   padding: 20px 20px 20px 45px;
   overflow-y: auto;

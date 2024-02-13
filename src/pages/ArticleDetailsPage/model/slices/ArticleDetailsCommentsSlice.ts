@@ -7,18 +7,18 @@ import { StateSchema } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
 import { ArticleDetailsCommentSchema } from '../types/ArticleDetailsCommentSchema';
 import {
-  fetchCommentByArticleId,
+  fetchCommentsByArticleId,
 } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 const commentsAdapter = createEntityAdapter<Comment>({
-  selectId: (comment: Comment) => comment.id,
+  selectId: (comment) => comment.id,
 });
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
   (state) => state.articleDetailsComments || commentsAdapter.getInitialState(),
 );
 
-const ArticleDetailsCommentsSlice = createSlice({
+const articleDetailsCommentsSlice = createSlice({
   name: 'ArticleDetailsCommentsSlice',
   initialState: commentsAdapter.getInitialState<ArticleDetailsCommentSchema>({
     isLoading: false,
@@ -29,19 +29,19 @@ const ArticleDetailsCommentsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCommentByArticleId.pending, (state) => {
+      .addCase(fetchCommentsByArticleId.pending, (state) => {
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(fetchCommentByArticleId.fulfilled, (state, action: PayloadAction<Comment[]>) => {
+      .addCase(fetchCommentsByArticleId.fulfilled, (state, action: PayloadAction<Comment[]>) => {
         state.isLoading = false;
         commentsAdapter.setAll(state, action.payload);
       })
-      .addCase(fetchCommentByArticleId.rejected, (state, action) => {
+      .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
   },
 });
 
-export const { reducer: ArticleDetailsCommentsReducer } = ArticleDetailsCommentsSlice;
+export const { reducer: articleDetailsCommentsReducer } = articleDetailsCommentsSlice;
