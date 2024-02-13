@@ -11,7 +11,7 @@ import {
 } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
 const commentsAdapter = createEntityAdapter<Comment>({
-  selectId: (comment) => comment.id,
+  selectId: (comment: Comment) => comment.id,
 });
 
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
