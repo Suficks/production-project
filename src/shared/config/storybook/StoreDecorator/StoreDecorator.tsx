@@ -7,6 +7,7 @@ import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addC
 import {
   articleDetailsCommentsReducer,
 } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentSlice';
+import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultReducers: ReducersList = {
@@ -15,6 +16,7 @@ const defaultReducers: ReducersList = {
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
   articleDetailsComments: articleDetailsCommentsReducer,
+  articlesPage: articlesPageReducer,
 };
 
 export const StoreDecorator = (
