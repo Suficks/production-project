@@ -4,6 +4,11 @@ import { initArticlesPage } from './initArticlesPage';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 
+const searchParams = new URLSearchParams(window.location.search);
+searchParams.set('sort', 'title');
+searchParams.set('order', 'asc');
+searchParams.set('search', 'scala');
+
 describe('initArticlesPage.test', () => {
   test('success', async () => {
     const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -11,10 +16,11 @@ describe('initArticlesPage.test', () => {
         _inited: false,
       },
     });
-    await thunk.callThunk();
 
-    expect(thunk.dispatch).toHaveBeenCalledTimes(4);
-    expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+    await thunk.callThunk(searchParams);
+
+    expect(thunk.dispatch).toHaveBeenCalledTimes(7);
+    expect(fetchArticlesList).toHaveBeenCalledWith({});
   });
 
   test('error with _inited: true', async () => {
@@ -23,9 +29,10 @@ describe('initArticlesPage.test', () => {
         _inited: true,
       },
     });
-    await thunk.callThunk();
 
-    expect(thunk.dispatch).toHaveBeenCalledTimes(2);
+    await thunk.callThunk(searchParams);
+
+    expect(thunk.dispatch).toHaveBeenCalledTimes(5);
     expect(fetchArticlesList).not.toHaveBeenCalled();
   });
 });

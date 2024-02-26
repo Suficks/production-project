@@ -6,5 +6,15 @@
   "Введите текст комментария": "Enter comment text",
   "Отправить": "Send",
   "Читать далее...": "Continue reading...",
-  "Назад к списку": "Back to list"
+  "Назад к списку": "Back to list",
+  "Сортировать по": "Sort by",
+  "Поиск": "Search",
+  "по": "by",
+  "возрастанию": "increasing",
+  "убыванию": "decreasing",
+  "Все статьи": "All",
+  "Айти": "It",
+  "Экономика": "Economics",
+  "Наука": "Science",
+  "Статьи не найдены": "No articles found"
 }

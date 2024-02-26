@@ -6,6 +6,12 @@ export enum ArticleBlockType {
   IMAGE = 'IMAGE'
 }
 
+export enum ArticleSortField {
+  VIEWS = 'views',
+  TITLE = 'title',
+  CREATED = 'createdAt',
+}
+
 export interface ArticleBlockBase {
   id: string
   type: ArticleBlockType
@@ -31,6 +37,7 @@ export interface ArticleCodeBlock extends ArticleBlockBase {
 export type ArticleBlock = ArticleImageBlock | ArticleTextBlock | ArticleCodeBlock
 
 export enum ArticleType {
+  ALL = 'ALL',
   IT = 'IT',
   SCIENCE = 'SCIENCE',
   ECONOMICS = 'ECONOMICS'
