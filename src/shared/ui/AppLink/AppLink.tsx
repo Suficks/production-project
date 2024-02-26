@@ -1,4 +1,4 @@
-import { ReactNode, memo } from 'react';
+import { HTMLAttributeAnchorTarget, ReactNode, memo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -15,6 +15,7 @@ interface AppLinkProps {
   children?: ReactNode
   to: string
   theme?: AppLinkTheme
+  target?: HTMLAttributeAnchorTarget
 }
 
 export const AppLink = memo((props: AppLinkProps) => {
