@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 import ArticlesPage from './ArticlesPage';
 
 export default {
@@ -14,4 +15,16 @@ const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {.
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({})];
+Normal.decorators = [StoreDecorator({
+  articlesPage: {
+    page: 1,
+    limit: 4,
+    hasMore: false,
+    view: ArticleView.SMALL,
+    order: 'asc',
+    sort: ArticleSortField.TITLE,
+    search: '',
+    type: ArticleType.ALL,
+    _inited: true,
+  },
+})];

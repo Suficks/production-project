@@ -14,7 +14,6 @@ import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { SortOrder } from 'shared/types';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
-import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
 
 import {
   getArticlesPageOrder,

@@ -3,6 +3,7 @@ import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { profileReducer } from 'entities/Profile';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { uiReducer } from 'features/UI';
 import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 import {
   articleDetailsCommentsReducer,
@@ -17,6 +18,7 @@ const defaultReducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
   articleDetailsComments: articleDetailsCommentsReducer,
   articlesPage: articlesPageReducer,
+  ui: uiReducer,
 };
 
 export const StoreDecorator = (

@@ -32,7 +32,7 @@ describe('initArticlesPage.test', () => {
 
     await thunk.callThunk(searchParams);
 
-    expect(thunk.dispatch).toHaveBeenCalledTimes(5);
+    expect(thunk.dispatch).toHaveBeenCalledTimes(2);
     expect(fetchArticlesList).not.toHaveBeenCalled();
   });
 });
