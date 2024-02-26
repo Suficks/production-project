@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { TextSize, Text } from 'shared/ui/Text/Text';
 
 function AboutPage() {
   const { t } = useTranslation('about');
 
   return (
-    <h1>{t('О нас')}</h1>
+    <Text size={TextSize.L} title={t('О нас')} />
   );
 }
 

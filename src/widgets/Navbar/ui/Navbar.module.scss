@@ -15,3 +15,12 @@
   align-items: center;
   margin-left: auto;
 }
+
+.appName {
+  width: var(--sidebar-width);
+  margin-left: 15px;
+}
+
+.createBtn {
+  font: var(--font-m);
+}
