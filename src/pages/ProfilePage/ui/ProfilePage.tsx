@@ -27,7 +27,7 @@ import { Page } from 'widgets/Page/Page';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
-interface ProfilePageProps {
+export interface ProfilePageProps {
   className?: string
 }
 

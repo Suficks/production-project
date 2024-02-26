@@ -1,6 +1,4 @@
-import { lazy } from 'react';
+import { FC, lazy } from 'react';
+import { ProfilePageProps } from './ProfilePage';
 
-export const ProfilePageAsync = lazy(async () => {
-  const importFile = await import('./ProfilePage');
-  return importFile;
-});
+export const ProfilePageAsync = lazy<FC<ProfilePageProps>>(() => import('./ProfilePage'));

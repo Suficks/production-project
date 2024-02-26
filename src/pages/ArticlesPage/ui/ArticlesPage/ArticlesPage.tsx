@@ -25,7 +25,7 @@ import { initArticlesPage } from '../../model/services/initArticlesPage/initArti
 import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter';
 import { articlesPageReducer, getArticles } from '../../model/slice/articlesPageSlice';
 
-interface ArticlesPageProps {
+export interface ArticlesPageProps {
   className?: string;
 }
 const reducers: ReducersList = {
