@@ -1,4 +1,4 @@
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   List,

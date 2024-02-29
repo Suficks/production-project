@@ -43,6 +43,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'best-fsd-helper',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -75,6 +76,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'best-fsd-helper/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
