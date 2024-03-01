@@ -1,4 +1,4 @@
-:root {
+.app_light_theme {
   --background-color: rgb(194 194 203);
   --inverted-background-color: rgb(14 14 87);
   --primary-color: rgb(0 33 255);
@@ -15,4 +15,7 @@
 
   // card
   --card-bg: rgb(169 169 170);
+
+  // listbox
+  --listbox-bg: rgb(169 169 170);
 }

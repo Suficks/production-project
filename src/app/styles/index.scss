@@ -1,20 +1,17 @@
 @import "reset";
 @import "./variables/global";
-@import "./themes/dark";
 @import "./themes/light";
+@import "./themes/dark";
 @import "./themes/orange";
-
-body {
-  color: var(--primary-color);
-  font: var(--font-m);
-}
 
 a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+.app,
+.app_modal {
+  color: var(--primary-color);
+  font: var(--font-m);
 }
 
 .app {
