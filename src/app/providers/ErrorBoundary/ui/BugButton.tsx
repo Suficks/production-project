@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button } from 'shared/ui/Button/Button';
 
 export const BugButton: FC = () => {
   const [error, setError] = useState(false);

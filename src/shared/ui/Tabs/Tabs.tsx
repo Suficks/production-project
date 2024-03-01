@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
+import { HStack } from '../Stack';
 
 export interface TabItem {
   value: string
@@ -24,7 +25,7 @@ export const Tabs = memo(({
   }, [onTabClick]);
 
   return (
-    <div className={classNames(cls.Tabs, {}, [className])}>
+    <HStack gap="8" className={classNames(cls.Tabs, {}, [className])}>
       {tabs.map((tab) => (
         <Card
           theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED}
@@ -35,6 +36,6 @@ export const Tabs = memo(({
           {tab.content}
         </Card>
       ))}
-    </div>
+    </HStack>
   );
 });

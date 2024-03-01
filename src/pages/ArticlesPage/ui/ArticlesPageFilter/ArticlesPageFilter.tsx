@@ -15,6 +15,7 @@ import { SortOrder } from 'shared/types';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 
+import { HStack, VStack } from 'shared/ui/Stack';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
@@ -24,7 +25,6 @@ import {
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
-import cls from './ArticlesPageFilter.module.scss';
 
 interface ArticlesPageFilterProps {
   className?: string;
@@ -74,8 +74,11 @@ export const ArticlesPageFilter = memo(({ className }: ArticlesPageFilterProps) 
   }, [dispatch, fetchData]);
 
   return (
-    <div className={classNames(cls.ArticlesPageFilter, {}, [className])}>
-      <div className={cls.sortWrapper}>
+    <VStack
+      gap="16"
+      className={classNames('', {}, [className])}
+    >
+      <HStack justify="between" max>
         <ArticleSortSelector
           sort={sort}
           order={order}
@@ -83,8 +86,8 @@ export const ArticlesPageFilter = memo(({ className }: ArticlesPageFilterProps) 
           onChangeOrder={onChangeOrder}
         />
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
-      </div>
-      <Card className={cls.search}>
+      </HStack>
+      <Card>
         <Input
           value={search}
           onChange={onChangeSearch}
@@ -94,8 +97,7 @@ export const ArticlesPageFilter = memo(({ className }: ArticlesPageFilterProps) 
       <ArticleTypeTabs
         value={type}
         onChangeType={onChangeType}
-        className={cls.tabs}
       />
-    </div>
+    </VStack>
   );
 });

@@ -6,6 +6,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
+import { HStack } from 'shared/ui/Stack';
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 
@@ -22,10 +23,13 @@ export function App() {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-        <div className="content-page">
+        <HStack
+          align="start"
+          className="content-page"
+        >
           <Sidebar />
           {inited && <AppRouter />}
-        </div>
+        </HStack>
       </Suspense>
     </div>
   );

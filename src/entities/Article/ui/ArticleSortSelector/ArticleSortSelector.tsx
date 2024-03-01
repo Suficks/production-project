@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Select, SelectOptions } from 'shared/ui/Select/Select';
 import { SortOrder } from 'shared/types';
-import cls from './ArticleSortSelector.module.scss';
+import { HStack } from 'shared/ui/Stack';
 import { ArticleSortField } from '../../model/types/article';
 
 interface ArticleSortSelectorProps {
@@ -51,7 +51,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
   ], [t]);
 
   return (
-    <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
+    <HStack gap="16" className={classNames('', {}, [className])}>
       <Select
         options={sortFieldOptions}
         value={sort}
@@ -64,6 +64,6 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
         label={t('по')}
         onChange={onChangeOrder}
       />
-    </div>
+    </HStack>
   );
 });

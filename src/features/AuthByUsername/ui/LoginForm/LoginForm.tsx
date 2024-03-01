@@ -10,6 +10,7 @@ import {
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { VStack } from 'shared/ui/Stack';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
@@ -52,7 +53,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <div className={classNames(cls.LoginForm, {}, [className])}>
+      <VStack gap="16" className={classNames(cls.LoginForm, {}, [className])}>
         <Text title={t('Форма авторизации')} />
         {error && <Text text={t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
         <Input
@@ -78,7 +79,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         >
           {t('Войти')}
         </Button>
-      </div>
+      </VStack>
     </DynamicModuleLoader>
   );
 });

@@ -3,10 +3,6 @@
   border: 2px solid var(--inverted-background-color);
 }
 
-.input {
-  margin-top: 10px;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   margin: 0;
@@ -16,17 +12,7 @@ input::-webkit-inner-spin-button {
 
 .loading,
 .error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-}
-
-.avatarWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  height: 300px;
 }
 
 .editing {

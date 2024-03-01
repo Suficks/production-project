@@ -1,12 +1,7 @@
 .link {
-  opacity: 1;
-}
+  height: var(--font-line-l);
 
-.item {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-top: 10px;
+  opacity: 1;
 }
 
 .icon {
