@@ -9,11 +9,11 @@
   background: var(--inverted-background-color);
 }
 
-.links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+.links,
+.dropdown {
   margin-left: auto;
+
+  white-space: nowrap;
 }
 
 .appName {
