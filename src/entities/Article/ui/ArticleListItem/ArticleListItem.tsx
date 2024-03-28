@@ -89,7 +89,7 @@ export const ArticleListItem = memo(({
           {types}
           {views}
         </div>
-        <Text title={article.title} className={cls.title} />
+        <Text text={article.title} className={cls.title} />
       </Card>
     </AppLink>
   );

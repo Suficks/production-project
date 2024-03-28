@@ -17,5 +17,6 @@
   "Имя и фамилия обязательны": "First and last name are required",
   "Некорректный возраст": "Incorrect age",
   "Некорректный регион": "Incorrect region",
-  "Серверная ошибка при сохранении": "Server error when saving"
+  "Серверная ошибка при сохранении": "Server error when saving",
+  "Профиль не найден": "Profile not found"
 }

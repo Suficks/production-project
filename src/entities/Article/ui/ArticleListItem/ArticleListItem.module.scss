@@ -1,8 +1,11 @@
 .BIG {
-  margin-bottom: 30px;
-
   .views {
     margin-left: auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
   }
 
   .username {
@@ -32,7 +35,7 @@
   }
 
   .textBlock {
-    max-height: 180px;
+    max-height: 200px;
     overflow-y: hidden;
   }
 }

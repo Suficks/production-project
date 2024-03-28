@@ -1,8 +1,8 @@
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { profileReducer, profileActions } from './profileSlice';
-import { ProfileSchema, ValidateProfileErrors } from '../types/profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ProfileSchema, ValidateProfileErrors } from '../types/editableProfileCardSchema';
 
 const data = {
   first: 'Sofia',

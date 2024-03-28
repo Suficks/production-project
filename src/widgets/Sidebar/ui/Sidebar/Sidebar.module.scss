@@ -4,6 +4,8 @@
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
 
+  font: var(--font-l);
+
   background: var(--inverted-background-color);
 
   transition: width 0.3s ease;

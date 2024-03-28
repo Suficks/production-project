@@ -23,13 +23,10 @@ export function App() {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-        <HStack
-          align="start"
-          className="content-page"
-        >
+        <div className="content-page">
           <Sidebar />
           {inited && <AppRouter />}
-        </HStack>
+        </div>
       </Suspense>
     </div>
   );

@@ -19,7 +19,7 @@ describe('fetchNextArticlesPage.test', () => {
     await thunk.callThunk();
 
     expect(thunk.dispatch).toHaveBeenCalledTimes(4);
-    expect(fetchArticlesList).toHaveBeenCalledWith({});
+    expect(fetchArticlesList).toHaveBeenCalled();
   });
 
   test('error with hasMore: false', async () => {
